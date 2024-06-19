@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 style="color: rgb(32, 181, 230); text-align: center; font-size: 38px; margin-top: 34px !important; ">Tab Image</h2>
+    <div class="container">
+        <div class="image-col">
+            <img src="image/image1.jpg" alt="" onclick="opentab(this)">
+            <img src="image/image2.jpg" alt="" onclick="opentab(this)">
+            <img src="image/image3.jpg" alt="" onclick="opentab(this)">
+            <img src="image/image4.jpg" alt="" onclick="opentab(this)">
+        </div>
+        <div class="show-image">
+            <span class="close">X</span>
+            <img id="show"></img>
+        </div>
+    </div>
+
+    <script>
+        function opentab(imags){
+            showImage.src=imags.src;
+            showImage.parentElement.style.display='block';
+        }
+        var showImage=document.getElementById('show');
+        var closeBtn=document.getElementsByClassName('close')[0];
+        closeBtn.onclick=function(){
+            showImage.parentElement.style.display='none';
+        }
+        
+    </script>
+</body>
+</html>
